@@ -1,8 +1,12 @@
 /* eslint-disable prettier/prettier */
+
 import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from '@next/font/google';
 import styles from '@/styles/Home.module.css';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Unstable_Grid2';
 
 // Note: The subsets need to use single quotes because the font loader values must be explicitly written literal.
 // eslint-disable-next-line @typescript-eslint/quotes
@@ -96,6 +100,20 @@ export default function Home() {
           </a>
         </div>
       </main>
+
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={2} minHeight={160}>
+          <Grid xs display="flex" justifyContent="center" alignItems="center">
+            <Avatar src="/static/images/avatar/1.jpg" />
+          </Grid>
+          <Grid display="flex" justifyContent="center" alignItems="center">
+            <Avatar src="/static/images/avatar/2.jpg" />
+          </Grid>
+          <Grid xs display="flex" justifyContent="center" alignItems="center">
+            <Avatar src="/static/images/avatar/3.jpg" />
+          </Grid>
+        </Grid>
+      </Box>
     </>
   );
 }
